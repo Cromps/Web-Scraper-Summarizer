@@ -7,7 +7,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 #Link to the Firestore Database
-cred = credentials.Certificate(r"C:\Users\ayaan\OneDrive\Documents\Programming\mymoney-c54ad-firebase-adminsdk-i3h55-448eb274ff.json")
+cred = credentials.Certificate(FIREBASEKEY)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 #API url
@@ -41,8 +41,8 @@ def transfer_data():
             }
             headers = {
                 "content-type": "application/json",
-                "X-RapidAPI-Key": "688f887998msh0a0e545e95d6e23p1c8aacjsn2997104127bd",
-                "X-RapidAPI-Host": "tldrthis.p.rapidapi.com"
+                "X-RapidAPI-Key": APIKEY,
+                "X-RapidAPI-Host": APIHOST
             }
 
             response = requests.request("POST", urld, json=payload, headers=headers)
