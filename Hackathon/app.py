@@ -34,8 +34,8 @@ def webpage():
             }
             headers = {
                 "content-type": "application/json",
-                "X-RapidAPI-Key": "c1df1cd5c1msh9856464570022a9p1a8e75jsn48f43ad8d5d7",
-                "X-RapidAPI-Host": "tldrthis.p.rapidapi.com"
+                "X-RapidAPI-Key": APIKEY,
+                "X-RapidAPI-Host": APIHOST
             }
 
             response = requests.request("POST", urld, json=payload, headers=headers)
